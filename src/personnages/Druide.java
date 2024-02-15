@@ -42,7 +42,9 @@ public class Druide {
 	}
 	
 	public void booster(Gaulois gaulois) {
-		if (gaulois.getNom() == "Obélix") {
+		String nomGaulois = gaulois.getNom();
+		
+		if (nomGaulois != null && nomGaulois.equals("Obélix")) {
 			this.parler("Non, Obélix !... Tu n'auras pas de potion magique !");
 			return;
 		}
@@ -54,7 +56,7 @@ public class Druide {
 		int i = 10;
 		while (i > 0) {			
 			panoramix.preparerPotion();
-			i-= 1;
+			i--;
 		}
 	}
 }
